@@ -10,7 +10,8 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name recipevault"
   },
   "dependencies": {
     "pinia": "^3.0.4",
@@ -29,7 +30,8 @@
     "oxlint": "~1.60.0",
     "prettier": "3.8.3",
     "vite": "^8.0.8",
-    "vite-plugin-vue-devtools": "^8.1.1"
+    "vite-plugin-vue-devtools": "^8.1.1",
+    "wrangler": "^4.95.0"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"

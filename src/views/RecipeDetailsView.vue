@@ -63,7 +63,8 @@ function updateRecipe() {
 .container {
   padding: 30px;
   min-height: 100vh;
-  background: linear-gradient(180deg, #e7f5fb, #f6e4ef);
+  background: linear-gradient(180deg, #faf5ff, #f3e8ff);
+  font-family: Arial, sans-serif;
 }
 
 .card {
@@ -72,12 +73,14 @@ function updateRecipe() {
   background-color: white;
   padding: 25px;
   border-radius: 18px;
-  box-shadow: 0 4px 12px rgba(181, 101, 141, 0.2);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
 }
 
 h1 {
-  color: #b5658d;
+  color: #9333ea;
   text-align: center;
+  font-family: 'Lucida Calligraphy', cursive;
+  font-size: 34px;
 }
 
 label {
@@ -93,7 +96,7 @@ select {
   width: 100%;
   padding: 10px;
   margin-top: 6px;
-  border: 1px solid #f0c6d8;
+  border: 1px solid #d8b4fe;
   border-radius: 8px;
 }
 
@@ -104,7 +107,7 @@ textarea {
 button {
   margin-top: 18px;
   padding: 10px 14px;
-  background-color: #b5658d;
+  background-color: #9333ea;
   color: white;
   border: none;
   border-radius: 8px;
@@ -112,6 +115,6 @@ button {
 }
 
 button:hover {
-  background-color: #9d4f78;
+  background-color: #7e22ce;
 }
 </style>

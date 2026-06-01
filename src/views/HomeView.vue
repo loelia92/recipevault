@@ -33,12 +33,15 @@ const recipesStore = useRecipesStore()
   padding: 30px;
   min-height: 100vh;
   background: linear-gradient(180deg, #faf5ff, #f3e8ff);
+  font-family: Arial, sans-serif;
 }
 
 h1 {
   text-align: center;
   color: #9333ea;
   margin-bottom: 10px;
+  font-family: 'Lucida Calligraphy', cursive;
+  font-size: 42px;
 }
 
 .subtitle {
@@ -71,6 +74,8 @@ h2 {
 
 .recipe-card h3 {
   color: #9333ea;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 22px;
 }
 
 button {

@@ -54,6 +54,7 @@ function saveRecipe() {
   padding: 30px;
   min-height: 100vh;
   background: linear-gradient(180deg, #faf5ff, #f3e8ff);
+  font-family: Arial, sans-serif;
 }
 
 .card {
@@ -68,6 +69,8 @@ function saveRecipe() {
 h1 {
   text-align: center;
   color: #9333ea;
+  font-family: 'Lucida Calligraphy', cursive;
+  font-size: 38px;
 }
 
 label {

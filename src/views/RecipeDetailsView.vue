@@ -32,49 +32,86 @@ function updateRecipe() {
 
 <template>
   <div class="container">
-    <h1>Recipe Details / Edit Recipe</h1>
+    <div class="card">
+      <h1>Recipe Details / Edit Recipe</h1>
 
-    <label>Select a recipe:</label>
-    <select v-model="selectedRecipeId" @change="loadRecipe">
-      <option value="">Choose recipe</option>
-      <option v-for="recipe in recipesStore.recipes" :key="recipe.id" :value="recipe.id">
-        {{ recipe.title }}
-      </option>
-    </select>
+      <label>Select a recipe:</label>
+      <select v-model="selectedRecipeId" @change="loadRecipe">
+        <option value="">Choose recipe</option>
+        <option v-for="recipe in recipesStore.recipes" :key="recipe.id" :value="recipe.id">
+          {{ recipe.title }}
+        </option>
+      </select>
 
-    <div v-if="selectedRecipeId">
-      <br />
+      <div v-if="selectedRecipeId">
+        <label>Title</label>
+        <input v-model="title" type="text" placeholder="Recipe title" />
 
-      <input v-model="title" type="text" placeholder="Recipe title" />
+        <label>Ingredients</label>
+        <textarea v-model="ingredients" placeholder="Ingredients"></textarea>
 
-      <br /><br />
+        <label>Instructions</label>
+        <textarea v-model="instructions" placeholder="Instructions"></textarea>
 
-      <textarea v-model="ingredients" placeholder="Ingredients"></textarea>
-
-      <br /><br />
-
-      <textarea v-model="instructions" placeholder="Instructions"></textarea>
-
-      <br /><br />
-
-      <button @click="updateRecipe">Update Recipe</button>
+        <button @click="updateRecipe">Update Recipe</button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 .container {
-  padding: 20px;
+  padding: 30px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e7f5fb, #f6e4ef);
+}
+
+.card {
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(181, 101, 141, 0.2);
+}
+
+h1 {
+  color: #b5658d;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #3f3f46;
 }
 
 input,
 textarea,
 select {
-  width: 300px;
-  padding: 8px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #f0c6d8;
+  border-radius: 8px;
+}
+
+textarea {
+  height: 90px;
 }
 
 button {
-  padding: 8px 12px;
+  margin-top: 18px;
+  padding: 10px 14px;
+  background-color: #b5658d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9d4f78;
 }
 </style>

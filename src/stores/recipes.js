@@ -51,5 +51,17 @@ export const useRecipesStore = defineStore('recipes', {
 
       this.saveRecipes()
     },
+
+    updateRecipe(id, updatedRecipe) {
+      const recipe = this.recipes.find((recipe) => recipe.id === id)
+
+      if (recipe) {
+        recipe.title = updatedRecipe.title
+        recipe.ingredients = updatedRecipe.ingredients
+        recipe.instructions = updatedRecipe.instructions
+
+        this.saveRecipes()
+      }
+    },
   },
 })

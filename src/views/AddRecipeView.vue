@@ -7,6 +7,7 @@ const recipesStore = useRecipesStore()
 const title = ref('')
 const ingredients = ref('')
 const instructions = ref('')
+const image = ref('')
 
 function saveRecipe() {
   if (!title.value || !ingredients.value || !instructions.value) {
@@ -18,11 +19,13 @@ function saveRecipe() {
     title: title.value,
     ingredients: ingredients.value,
     instructions: instructions.value,
+    image: image.value,
   })
 
   title.value = ''
   ingredients.value = ''
   instructions.value = ''
+  image.value = ''
 
   alert('Recipe added!')
 }
@@ -42,6 +45,9 @@ function saveRecipe() {
 
         <label>Instructions</label>
         <textarea v-model="instructions" placeholder="Instructions"></textarea>
+
+        <label>Image URL</label>
+        <input v-model="image" type="text" placeholder="Paste image URL here" />
 
         <button type="submit">Save Recipe</button>
       </form>

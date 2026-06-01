@@ -14,6 +14,8 @@ const recipesStore = useRecipesStore()
 
     <div class="recipe-list">
       <div v-for="recipe in recipesStore.recipes" :key="recipe.id" class="recipe-card">
+        <img v-if="recipe.image" :src="recipe.image" alt="Recipe image" />
+
         <h3>{{ recipe.title }}</h3>
 
         <p><strong>Ingredients:</strong></p>
@@ -70,6 +72,14 @@ h2 {
   width: 250px;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .recipe-card h3 {

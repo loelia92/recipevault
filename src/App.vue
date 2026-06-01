@@ -14,8 +14,20 @@
 <style scoped>
 .nav {
   display: flex;
-  gap: 20px;
-  padding: 15px;
-  background-color: #f5f5f5;
+  justify-content: center;
+  gap: 25px;
+  padding: 18px;
+  background: linear-gradient(90deg, #c084fc, #a855f7);
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
 }
 </style>

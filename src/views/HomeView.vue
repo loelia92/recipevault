@@ -8,7 +8,7 @@ const recipesStore = useRecipesStore()
   <div class="container">
     <h1>RecipeVault</h1>
 
-    <p>Save and organize your favorite recipes.</p>
+    <p class="subtitle">Save and organize your favorite recipes.</p>
 
     <h2>Total Recipes: {{ recipesStore.totalRecipes }}</h2>
 
@@ -30,29 +30,60 @@ const recipesStore = useRecipesStore()
 
 <style scoped>
 .container {
-  padding: 20px;
+  padding: 30px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #faf5ff, #f3e8ff);
 }
 
 h1 {
   text-align: center;
+  color: #9333ea;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #52525b;
+}
+
+h2 {
+  text-align: center;
+  color: #7e22ce;
+  margin-top: 20px;
 }
 
 .recipe-list {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 20px;
+  margin-top: 25px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .recipe-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  width: 220px;
-  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #d8b4fe;
+  padding: 18px;
+  width: 250px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+}
+
+.recipe-card h3 {
+  color: #9333ea;
 }
 
 button {
-  padding: 6px 10px;
-  margin-top: 10px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: #9333ea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7e22ce;
 }
 </style>
